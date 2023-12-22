@@ -1,0 +1,1 @@
+create table if not exists New_employee as select employeeNumber , lastName,firstname,officecode,jobtitle,concat(lastname,".",firstname,"@gmail.com") as email from employees;
