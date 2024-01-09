@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "H:\\SETCE_ST10\\Year 2 - Semister 2\\C# lll\\DemoProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{78B3DDF1-6B9A-4B66-8874-B332B68DFAE8}|DemoProject\\DemoProject.csproj|h:\\setce_st10\\year 2 - semister 2\\c# lll\\demoproject\\demoproject\\dao\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78B3DDF1-6B9A-4B66-8874-B332B68DFAE8}|DemoProject\\DemoProject.csproj|solutionrelative:demoproject\\dao\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78B3DDF1-6B9A-4B66-8874-B332B68DFAE8}|DemoProject\\DemoProject.csproj|h:\\setce_st10\\year 2 - semister 2\\c# lll\\demoproject\\demoproject\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{78B3DDF1-6B9A-4B66-8874-B332B68DFAE8}|DemoProject\\DemoProject.csproj|solutionrelative:demoproject\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserDAO.cs",
+              "DocumentMoniker": "H:\\SETCE_ST10\\Year 2 - Semister 2\\C# lll\\DemoProject\\DemoProject\\dao\\UserDAO.cs",
+              "RelativeDocumentMoniker": "DemoProject\\dao\\UserDAO.cs",
+              "ToolTip": "H:\\SETCE_ST10\\Year 2 - Semister 2\\C# lll\\DemoProject\\DemoProject\\dao\\UserDAO.cs",
+              "RelativeToolTip": "DemoProject\\dao\\UserDAO.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-08T15:18:56.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "H:\\SETCE_ST10\\Year 2 - Semister 2\\C# lll\\DemoProject\\DemoProject\\LoginForm.cs",
+              "RelativeDocumentMoniker": "DemoProject\\LoginForm.cs",
+              "ToolTip": "H:\\SETCE_ST10\\Year 2 - Semister 2\\C# lll\\DemoProject\\DemoProject\\LoginForm.cs [Design]",
+              "RelativeToolTip": "DemoProject\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-08T14:39:43.554Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+D:\Lecture\CSharp\DemoProject\DemoProject\bin\Debug\DemoProject.exe.config
+D:\Lecture\CSharp\DemoProject\DemoProject\bin\Debug\DemoProject.exe
+D:\Lecture\CSharp\DemoProject\DemoProject\bin\Debug\DemoProject.pdb
+D:\Lecture\CSharp\DemoProject\DemoProject\obj\Debug\DemoProject.csproj.AssemblyReference.cache
+D:\Lecture\CSharp\DemoProject\DemoProject\obj\Debug\DemoProject.Properties.Resources.resources
+D:\Lecture\CSharp\DemoProject\DemoProject\obj\Debug\DemoProject.csproj.GenerateResource.cache
+D:\Lecture\CSharp\DemoProject\DemoProject\obj\Debug\DemoProject.csproj.CoreCompileInputs.cache
+D:\Lecture\CSharp\DemoProject\DemoProject\obj\Debug\DemoProject.exe
+D:\Lecture\CSharp\DemoProject\DemoProject\obj\Debug\DemoProject.pdb
+D:\Lecture\CSharp\DemoProject\DemoProject\obj\Debug\DemoProject.Form1.resources
+D:\Lecture\CSharp\DemoProject\DemoProject\obj\Debug\DemoProject.LoginForm.resources
+D:\Lecture\CSharp\DemoProject\DemoProject\obj\Debug\DemoProject.MDIParent.resources
+D:\Lecture\CSharp\DemoProject\DemoProject\obj\Debug\DemoProject.LoginOtp.resources
+H:\SETCE_ST10\Year 2 - Semister 2\C# lll\DemoProject\DemoProject\bin\Debug\DemoProject.exe.config
+H:\SETCE_ST10\Year 2 - Semister 2\C# lll\DemoProject\DemoProject\bin\Debug\DemoProject.exe
+H:\SETCE_ST10\Year 2 - Semister 2\C# lll\DemoProject\DemoProject\bin\Debug\DemoProject.pdb
+H:\SETCE_ST10\Year 2 - Semister 2\C# lll\DemoProject\DemoProject\obj\Debug\DemoProject.csproj.AssemblyReference.cache
+H:\SETCE_ST10\Year 2 - Semister 2\C# lll\DemoProject\DemoProject\obj\Debug\DemoProject.Form1.resources
+H:\SETCE_ST10\Year 2 - Semister 2\C# lll\DemoProject\DemoProject\obj\Debug\DemoProject.LoginForm.resources
+H:\SETCE_ST10\Year 2 - Semister 2\C# lll\DemoProject\DemoProject\obj\Debug\DemoProject.LoginOtp.resources
+H:\SETCE_ST10\Year 2 - Semister 2\C# lll\DemoProject\DemoProject\obj\Debug\DemoProject.MDIParent.resources
+H:\SETCE_ST10\Year 2 - Semister 2\C# lll\DemoProject\DemoProject\obj\Debug\DemoProject.Properties.Resources.resources
+H:\SETCE_ST10\Year 2 - Semister 2\C# lll\DemoProject\DemoProject\obj\Debug\DemoProject.csproj.GenerateResource.cache
+H:\SETCE_ST10\Year 2 - Semister 2\C# lll\DemoProject\DemoProject\obj\Debug\DemoProject.csproj.CoreCompileInputs.cache
+H:\SETCE_ST10\Year 2 - Semister 2\C# lll\DemoProject\DemoProject\obj\Debug\DemoProject.exe
+H:\SETCE_ST10\Year 2 - Semister 2\C# lll\DemoProject\DemoProject\obj\Debug\DemoProject.pdb
