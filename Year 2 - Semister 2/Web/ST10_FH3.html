@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scoreboard</title>
+    <style>
+
+        .container {
+            background-image:url("https://cdn.britannica.com/35/238335-050-2CB2EB8A/Lionel-Messi-Argentina-Netherlands-World-Cup-Qatar-2022.jpg");
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: 50px auto;
+            width: 80%;
+        }
+        .quote {
+
+            border-radius: 10px;
+            padding: 20px;
+            margin-right: 20px;
+            flex-basis: 50%;
+            box-shadow: 0px 0px 10px #888888;
+        }
+        .quote h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .quote p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+        .image {
+            flex-basis: 40%;
+            box-shadow: 0px 0px 10px #888888;
+        }
+        .image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+
+
+        body {
+            background-color: #f2f2f2;
+        }
+        #scoreboard {
+            background-color: #e6e6e6;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 50px auto;
+            width: 80%;
+            box-shadow: 0px 0px 10px #888888;
+        }
+        #scoreboard h1 {
+            color: white;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 10px 10px 0px 0px;
+            margin: -20px -20px 20px -20px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(odd) {
+            background-color: #d9d9d9;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+
+
+        /* Style the navigation bar */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        /* Navigation bar links */
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px;
+        }
+
+        /* Dropdown button */
+        .dropbtn {
+            background-color: #333;
+            color: white;
+            border: none;
+        }
+
+        /* Dropdown container */
+        .dropdown {
+            float:left;
+        }
+
+        /* Dropdown content */
+        .dropdown-content {
+            display:none;
+            position:absolute;
+            background-color:#333333;
+            min-width :160px ;
+            box-shadow :0px8px16px0 rgba(0,0,0,0.2);
+            z-index :1 ;
+        }
+
+        /* Show dropdown content on hover */
+        .dropdown:hover .dropdown-content {display:block;}
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <div class="dropdown">
+        <button class="dropbtn">Download
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#">Food</a>
+            <a href="#">Drink</a>
+            <a href="#">Beer</a>
+            <a href="#">Milk</a>
+        </div>
+    </div>
+    <a href="#contact">Contact us</a>
+</div>
+
+
+
+<div id="scoreboard">
+    <h1>England - Premier League | February 11</h1>
+    <table>
+        <tr>
+            <th>FT</th>
+            <th>Cardiff City</th>
+            <th>0 - 0</th>
+            <th>Aston Villa</th>
+        </tr>
+        <tr>
+            <th>FT</th>
+            <th>Hull City</th>
+            <th>0 - 1</th>
+            <th>Southampton</th>
+        </tr>
+        <tr>
+            <th>FT</th>
+            <th>West Ham United</th>
+            <th>2 - 0</th>
+            <th>Norwich City</th>
+        </tr>
+        <tr>
+            <th>FT</th>
+            <th>West Bromwich Albion</th>
+            <th>1 - 1</th>
+            <th>Chelsea</th>
+        </tr>
+    </table>
+</div>
+
+
+
+
+<div class="container">
+    <div class="quote">
+        <h2>Quote by Lao Tzu</h2>
+        <p>"Be content with what you have; rejoice in the way things are. When you realize there is nothing lacking, the whole world belongs to you."</p>
+        <div class="quote1">
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
