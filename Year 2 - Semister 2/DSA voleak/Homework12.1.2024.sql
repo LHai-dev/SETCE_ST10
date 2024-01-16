@@ -23,7 +23,10 @@ WHERE PaymentDate BETWEEN '2004-03-01' AND '2004-03-31'
 ORDER BY Amount DESC
 LIMIT 3;
 
-SELECT ProductCode AS TotalQuantity
+SELECT
+    ProductCode,
+    COUNT(*) AS TotalSales
 FROM OrderDetails
 GROUP BY ProductCode
-ORDER BY TotalQuantity DESC;
+ORDER BY TotalSales DESC
+LIMIT 1;
