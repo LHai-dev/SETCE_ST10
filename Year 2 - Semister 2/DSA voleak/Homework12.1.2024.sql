@@ -65,3 +65,50 @@ FROM OrderDetails
 GROUP BY ProductCode
 ORDER BY TotalSales DESC
 LIMIT 1;
+
+-- 1.  ចូរបង្ហាញទិន្នន័យ Colum EmployeeNumber ,LastName,FirstName ចេញពី Table Employees 
+-- និង column City ចេញពី Table officesដែលមាន column  FirstName បញ្ចប់ដោយ អក្សរ “Y”  (5Rows)
+select employeeNumber, lastName, firstName, city from employees emp
+inner join offices ofc on ofc.officeCode= emp.officeCode
+where right(firstName, 1) = 'y';
+
+-- 2.  ចូរបង្ហាញទិន្នន័យ Colum CustomerNumber, Amount សរុបតាម customerNumber ចេញពី Table payments 
+-- និង FullName ដែលបានមកពី contactFirstName ភ្ជាប់ "  " ភ្ជាប់ contactLastName របស់ Table Customers (98Rows)
+select * from 
+(select customerNumber, sum(Amount) from payments group by customerNumberproductsproductscustomerscustomers) p
+inner join
+(select concat(contactFirstname, ' ', contactLastName), customerNumber from customers) c
+on c.customerNumber=p.customerNumber;
+
+
+
+
+-- 3.  ចូរបង្ហាញទិន្នន័យ Column CustomerNumber ដែលមិនបាន Pay សោះ និង បាន Pay សរុប តិចជាង 100000  
+-- ក្នុង Table Payments និង Customers (119 Rows)
+-- Noted: លុប ទិន្នន័យចេញពី Table Payments ដោយទុកតែ CustomerNumber លេខ (103,119,112,114,124)
+start transaction;
+delete from payments where customerNumber not in (103,119,112,114,124);
+rollback;
+
+select customerNumber from customers
+where customerNumber in
+(select customerNumber from payments
+group by customerNumber
+having sum(amount) < 100000)
+or customerNumber not in
+(select customerNumber from payments
+group by customerNumber);
+
+
+
+-- 4.  ចូរបង្ហាញទិន្នន័យ Column CustomerNumber និង ទិន្នន័យ Amount ធំជាងគេ ចំនួន 3 លេខ ដែលមាន PaymentDate ក្នុងឆ្នាំ 2004 ខែ 3 ចេញពី Table Payments (? Rows)
+select customerNumber, amount, paymentDate from payments
+where year(paymentDate) = 2004 and month(paymentdate) = 4
+order by amount desc
+limit 3
+
+-- 5.  ចូរបង្ហាញទិន្នន័យ Column ProductCode ដែលបានលក់ ច្រើនជាងគេបង្អស់ ក្នុង Table OrderDetails (1Row)
+select productCode, sum(quantityOrdered) qtyOrder from orderDetails
+group by productCode
+order by qtyOrder desc limit 1
+
