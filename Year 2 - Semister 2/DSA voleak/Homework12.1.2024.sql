@@ -30,3 +30,38 @@ FROM OrderDetails
 GROUP BY ProductCode
 ORDER BY TotalSales DESC
 LIMIT 1;
+
+
+
+-- 1
+select employeeNumber, lastname,firstname,city 
+from employees e
+inner join offices o on o.officeCode=e.officeCode
+where right(firstname,1)='y';
+-- 2
+select p.customerNumber,concat(contactFirstName," ",contactLastName) as fullname,sum(amount) total_amount
+from payments p
+inner join customers c on c.customerNumber=p.customerNumber
+group by customerNumber;
+-- 3 
+create table payments1 as select * from payments; -- create
+delete from payments1 where customerNumber not in (103,119,112,114,124); -- delete
+
+select C.CustomerNumber from Customers C
+where not exists (
+    select 1 from Payments P
+    where C.CustomerNumber = P.CustomerNumber and (P.Amount is null or P.Amount >= 100000)
+);
+-- 4
+select CustomerNumber,Amount,PaymentDate
+from Payments
+where paymentDate like "2004-03-%"
+order by Amount desc limit 3;
+-- 5
+SELECT
+    ProductCode,
+    COUNT(*) AS TotalSales
+FROM OrderDetails
+GROUP BY ProductCode
+ORDER BY TotalSales DESC
+LIMIT 1;
