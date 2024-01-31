@@ -1,6 +1,8 @@
 --4.  ចូរបង្ហាញទិន្នន័យ Column ទាំងអស់ដែលមាននៅក្នុង Table Customers ដែលយកតែ Column ContactLastname មានផ្ទុកអក្សរ A ចំនួន 2 តួរ និង មានលាយអក្សរ L (3 Rows)
 select * from customers where (length(contactlastname)-length(replace(contactlastname,'a','')) 
   + length (contactlastname) - length (replace(contactlastname,'A',''))) = 2 and contactlast like '%L%';
+
+
 -- 1.  រាប់ចំនួន Status តាមប្រភេទ Status នីមួយៗ ដែលមាននៅក្នុង Table Orders
 -- ដោយបង្ហាញ 6 columns (Shipped, Resolved, Cancelled, On Hold, Disputed, In Process) ដោយប្រើ Function IF
 
@@ -20,13 +22,34 @@ select
 --  ទិន្នន័យ “Ships” ត្រូវបង្ហាញ “S”
 --  ទិន្នន័យ “Trains” ត្រូវបង្ហាញ “T”
 --  ទិន្នន័យ “Trucks and Buses” ត្រូវបង្ហាញ “T&B”
---  ទិន្នន័យ “Vintage Cars” ត្រូវបង្ហាញ “VC” ដោយប្រើ Function IF  
+--  ទិន្នន័យ “Vintage Cars” ត្រូវបង្ហាញ “VC” ដោយប្រើ Function IF
+
+select * ,
+  if(ProductLine = 'Classic Cars' ,'CC',
+  if(ProductLine = 'Motorcycles','MC',
+  if(ProductLine = 'Planes' , 'P',
+  if(ProductLine = 'Ships','S',
+  if(ProductLine = 'Trains','T',
+  if(ProductLine = 'Trucks and Buses','T&B'
+  if(ProductLine = 'Vintage Cars','VC'))))))) as kaka from productLine;   
 
 
 -- 3.  ចូរកែទិន្នន័យទាំងអស់ ដែលនៅក្នុង Table offices ចំពោះ state ណាដែលមានទិន្នន័យទទេ ប្ដូរជា “Don’t Have” បើមានទិន្នន័យប្ដូរជា “Have” (7 Rows)
+  start transaction;
+update offices
+  set state  = if (state IS NOT NULL ,'have','Don''t Have');
+
 
 -- 5.  ចូរកែទិន្នន័យ Table Products ដោយកែត្រង់ Column QuantityInstock តាមលក្ខខណ្ឌដូចខាងក្រោម 
 --   បើ Column Productline មានទិន្នន័យ “Planes”  ថែម 50 លើ QuantityInstock ចាស់
 --   បើ Column Productline មានទិន្នន័យ “Classic Cars”  ថែម 10 លើ QuantityInstock ចាស់
 --   បើ Column Productline មានទិន្នន័យ “Trains”  ថែម 100 លើ QuantityInstock ចាស់
 --   ខុសពីលក្ខខណ្ឌខាងលើត្រូវរក្សា QuantityInstock នៅដដែល ដោយប្រើ Function IF
+
+start transaction;
+update Products set QuantityInStock = 
+  if(ProductLine = 'Planes',QuantityInStock + 50,
+  if(ProductLine = 'Classic Cars',QuantityInStock + 10,
+  if(ProductLine = 'Trains' , QuantityInStock+ 100,QuantityInStock)))  ;
+select ProductLine,quantityInStock from products;
+rollback;
