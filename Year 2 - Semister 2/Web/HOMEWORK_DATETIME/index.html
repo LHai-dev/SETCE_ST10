@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Date and Time</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+        }
+    
+        .date {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+    
+        h2 {
+            margin: 0;
+            font-size: 2em;
+            color: #ff6b6b;
+        }
+    
+        p {
+            margin: 5px 0;
+            font-size: 1.5em;
+            color: #ff7e5f;
+        }
+    </style>
+    
+    
+</head>
+
+<body>
+
+    <div class="date"></div>
+
+    <script>
+        const output = () => {
+            var date = new Date();
+
+            var hours = date.getHours();
+            var ampm = hours >= 12 ? "PM" : "AM";
+            hours = hours % 12;
+            hours = hours ? hours : 12;
+
+            var datetime = "<h2>" +
+                date.getDate() +
+                " " +
+                date.toLocaleString('default', { month: 'long' }) +
+                " " +
+                date.getFullYear() +
+                "</h2>" +
+                "<p>" +
+                hours +
+                ":" +
+                (date.getMinutes() < 10 ? "0" : "") +
+                date.getMinutes() +
+                ":"+date.getMilliseconds() +" "+
+
+                ampm +
+                "</p>";
+
+            document.querySelector(".date").innerHTML = datetime;
+        };
+
+        output();
+        setInterval(output, 1000);
+    </script>
+</body>
+
+</html>
